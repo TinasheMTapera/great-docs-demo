@@ -1,0 +1,19 @@
+[project]
+name = "great-docs-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "TinasheMTapera", email = "tinashemtapera@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "great-docs>=0.7",
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+    "quarto>=0.1.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.6,<0.12.0"]
+build-backend = "uv_build"
