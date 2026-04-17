@@ -1,0 +1,52 @@
+---
+title: "Module 1: `myfunc`"
+subtitle: "An example function to demonstrate `great-docs`"
+filters:
+    - sorting-hat
+    - ripper
+extensions:
+    sorting-hat:
+        keep:
+            - python
+    ripper:
+        include-yaml: false                  # remove yaml front matter, great-docs doesnt like it
+        script-links-position: "none"        # dont add links to scripts in the output
+        output-name: "myfunc"                # Custom base name for py script file
+        output-dir: "../src/great_docs_demo" # Directory to save scripts (optional)
+format: gfm
+---
+
+I'm creating a function below:
+
+```{python}
+#| sorting-hat: keep
+def myfunc(arg1, arg2, **kwargs):
+    """
+    Example function.
+
+    Parameters
+    ----------
+    arg1 : int
+    arg2 : str
+
+    Returns
+    -------
+    None
+    """
+    return arg1 + arg2
+```
+
+This function is a simple example that takes two arguments, `arg1` and `arg2`, and 
+returns their sum. The function is decorated with a docstring that describes its 
+parameters and return value.
+
+Below is a python code chunk that does not get exported to source code, but is used for 
+testing the function. We can add in automated tests, here too if we want:
+
+```{python}
+#| sorting-hat: remove
+# Test the function
+result = myfunc(1, 2)
+assert result == 3, "Test failed: myfunc(1, 2) should return 3"
+```
+

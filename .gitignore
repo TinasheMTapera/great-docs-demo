@@ -11,3 +11,8 @@ wheels/
 
 # Great Docs build directory (ephemeral, do not commit)
 great-docs/
+
+/.quarto/
+**/*.quarto_ipynb
+
+sandbox/

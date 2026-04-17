@@ -1,5 +1,8 @@
 ---
 title: "great-docs-demo"
+subtitle: "A demo project showcasing great-docs with Quarto"
+format: gfm
+
 ---
 
 ## Quarto

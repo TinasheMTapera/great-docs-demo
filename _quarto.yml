@@ -1,5 +1,7 @@
 project:
   title: "great-docs-demo"
-
-
-
+  output-dir: "user_guide"    # the output directory for intermediate junk; gitignore this!
+  render: 
+    - "dev/*"                 # render the development notebooks for documentation
+    - "!great-docs/**"        # DO NOT render great-docs directory to avoid circular rendering
+    - "!*.md"

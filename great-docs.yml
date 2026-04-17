@@ -18,9 +18,9 @@ parser: numpy
 # Set to false if your package has cyclic alias issues (e.g., PyO3/Rust bindings)
 dynamic: true
 
-# Exclusions
-# ----------
-# Items to exclude from auto-documentation (affects 'init' and 'scan')
+# API Discovery Settings
+# ----------------------
+# Exclude items from auto-documentation
 # exclude:
 #   - InternalClass
 #   - helper_function
@@ -62,6 +62,20 @@ authors:
 #   homepage: https://posit.co
 #   ror: https://ror.org/03wc8by49
 
+# API Reference Structure
+# -----------------------
+# Customize the sections below to organize your API documentation.
+# - Reorder items within a section to change their display order
+# - Move items between sections or create new sections
+# - Use 'members: false' to exclude methods from documentation
+# - Add 'desc:' to sections for descriptions
+
+reference:
+  - title: myfunc
+    desc: The main function of this package
+    contents:
+      - myfunc
+
 # Site Settings
 # -------------
 # site:
@@ -84,26 +98,3 @@ jupyter: python3
 #   enabled: true              # Enable CLI documentation
 #   module: my_package.cli     # Module containing Click commands
 #   name: cli                  # Name of the Click command object
-
-# API Reference Structure
-# -----------------------
-# Auto-discovery couldn't determine your package's public API.
-# You can manually specify which items to document here.
-#
-# Uncomment and customize the reference section below:
-#
-# reference:
-#   - title: Functions
-#     desc: Public functions provided by the package
-#     contents:
-#       - my_function
-#       - another_function
-#
-#   - title: Classes
-#     desc: Main classes for working with the package
-#     contents:
-#       - name: MyClass
-#         members: false       # Don't document methods inline
-#       - SimpleClass          # Methods documented inline (default)
-#
-# After editing, run 'great-docs build' to generate your documentation.
