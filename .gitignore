@@ -10,7 +10,7 @@ wheels/
 .venv
 
 # Great Docs build directory (ephemeral, do not commit)
-#great-docs/
+great-docs/
 
 /.quarto/
 **/*.quarto_ipynb
